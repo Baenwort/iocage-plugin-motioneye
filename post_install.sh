@@ -36,6 +36,7 @@ chown -R motioneye:motioneye /usr/local/etc/motioneye /var/lib/motioneye
 #chown -R motioneye:motioneye /usr/local/etc/motioneye /var/{run,log,db}/motioneye
 
 # Start the service
+chmod u+x /usr/local/etc/rc.d/motioneye
 service motioneye start
 
 exit 0
