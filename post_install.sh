@@ -14,6 +14,7 @@ ln -s /usr/local/bin/shasum /usr/local/bin/sha1sum
 python3 -m pip install 'https://github.com/motioneye-project/motioneye/archive/dev.tar.gz'
 
 # Enable motioneye
+chmod u+x /usr/local/etc/rc.d/motioneye
 sysrc -f /etc/rc.conf motioneye_enable="YES"
 
 # Create folders
@@ -36,7 +37,6 @@ chown -R motioneye:motioneye /usr/local/etc/motioneye /var/lib/motioneye
 #chown -R motioneye:motioneye /usr/local/etc/motioneye /var/{run,log,db}/motioneye
 
 # Start the service
-chmod u+x /usr/local/etc/rc.d/motioneye
 service motioneye start
 
 exit 0
