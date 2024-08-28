@@ -5,7 +5,7 @@ curl -sSfO 'https://bootstrap.pypa.io/get-pip.py'
 python3 get-pip.py
 
 # Create symlinks for pip 
-ln -s /usr/local/bin/pip3.9 /usr/local/bin/pip-3.9
+ln -s /usr/local/bin/pip3.11 /usr/local/bin/pip-3.11
 
 # Create symlink for sha1sum to allow file uploading to function
 ln -s /usr/local/bin/shasum /usr/local/bin/sha1sum
@@ -21,7 +21,7 @@ sysrc -f /etc/rc.conf motioneye_enable="YES"
 mkdir -p /usr/local/etc/motioneye /var/lib/motioneye
 
 # Get initial configuration
-cp /usr/local/lib/python3.9/site-packages/motioneye/extra/motioneye.conf.sample /usr/local/etc/motioneye/motioneye.conf
+cp /usr/local/lib/python3.11/site-packages/motioneye/extra/motioneye.conf.sample /usr/local/etc/motioneye/motioneye.conf
 sed -i.old 's|^conf_path .*|conf_path /usr/local/etc/motioneye|' /usr/local/etc/motioneye/motioneye.conf
 sed -i.old 's|^log_path .*|log_path /var/log/motioneye|' /usr/local/etc/motioneye/motioneye.conf
 sed -i.old 's|^run_path |#run_path |' /usr/local/etc/motioneye/motioneye.conf
